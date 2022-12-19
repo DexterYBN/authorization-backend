@@ -55,7 +55,7 @@ module.exports.usersController = {
         expiresIn: "12h",
       });
 
-      res.json({token});
+      res.json({ token, login: payload.login });
     } catch (error) {
       res.json({ error: error.message });
     }
