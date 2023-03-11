@@ -15,6 +15,8 @@ app.use(require("./routes/todos.route"));
 
 const { PORT, MONGO_SERVER } = process.env;
 
+mongoose.set('strictQuery', false);
+
 const connectAndStartServer = async () => {
   try {
     await mongoose.connect(MONGO_SERVER);
